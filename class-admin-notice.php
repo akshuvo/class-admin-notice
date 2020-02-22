@@ -51,6 +51,8 @@ class AddonMasterAdminNotice{
 			}
 			.notice.am--message a {
 			  text-decoration: none !important;
+			  margin-right: 10px;
+    		  position: relative;
 			}
 			.notice.am--message p {
 			  padding: 0;
@@ -61,6 +63,7 @@ class AddonMasterAdminNotice{
 			}
 			.am--message-actions span.amicon {
 			    vertical-align: text-bottom;
+			    vertical-align: middle;
 			}
 		</style>
 		<script type="text/javascript">
