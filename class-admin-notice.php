@@ -11,25 +11,18 @@
  **/
 
 class AddonMasterAdminNotice{
-
+	// Constructor
     public function __construct() {
     	// Hooked CSS/JS
         add_action( 'admin_footer', array( $this, 'admin_footer_scripts' ) );
-
         // Admin Notice Hook
         add_action( 'admin_notices', array( $this, 'render_notices' ) );
-
         // Ajax action
         add_action( 'wp_ajax_am_dismiss_notice', array( $this, 'notice_dismiss_ajax_function' ) );
     }
 
-
-	/**
-	 *	Admin JS/CSS
-	 *
-	 */
-	public function admin_footer_scripts(){
-		ob_start(); ?>
+    // Admin JS/CSS
+	public function admin_footer_scripts(){ ?>
 		<style>
 			.am--message-inner {
 			  display: -webkit-box;
@@ -99,8 +92,8 @@ class AddonMasterAdminNotice{
 
 				});
 			});
-		</script> <?php
-		echo ob_get_clean();
+		</script>
+		<?php
 	}
 
 	// Ajax Dismiss Function
@@ -118,10 +111,7 @@ class AddonMasterAdminNotice{
 		wp_die();
 	}
 
-
-	/**
-	 * Notice Display
-	 */
+	// Notice Display
 	public function render_notices() {
 		// addonmaster_admin_notice filter
         $args = apply_filters('addonmaster_admin_notice', $args = array());
