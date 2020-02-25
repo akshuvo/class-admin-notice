@@ -1,6 +1,6 @@
     /**
      * Plugin Name:  AddonMaster Admin Notice
-     * Plugin URI:   https://devshuvo.com
+     * Plugin URI:   https://akhtarujjaman.com
      * Author:       Akhtarujjaman Shuvo
      * Author URI:   https://akhtarujjaman.com
      * Version: 	  1.0.0
