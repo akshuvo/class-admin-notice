@@ -1,4 +1,5 @@
 ![Screenshot](https://raw.githubusercontent.com/akshuvo/class-admin-notice/master/class-admin-notice.png)
+![Screenshot](https://raw.githubusercontent.com/akshuvo/class-admin-notice/master/class-admin-notice.png)
 
     /**
      * Plugin Name:  AddonMaster Admin Notice
