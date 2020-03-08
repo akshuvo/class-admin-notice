@@ -1,3 +1,5 @@
+![Screenshot](https://raw.githubusercontent.com/akshuvo/class-admin-notice/master/class-admin-notice.png)
+
     /**
      * Plugin Name:  AddonMaster Admin Notice
      * Plugin URI:   https://akhtarujjaman.com
@@ -9,7 +11,6 @@
      * License URI:  https://www.gnu.org/licenses/gpl-2.0.html
      **/
 
-![Screenshot](https://raw.githubusercontent.com/akshuvo/class-admin-notice/master/class-admin-notice.png)
 
 # Dynamic Admin Notice class for WordPress
 This  is a simple Plugin/Class file that can be used for make dynamic admin notices for wordpress.
