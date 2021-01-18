@@ -135,7 +135,7 @@ class AddonMasterAdminNotice{
 			}
 
 			// Check Dismissed or not
-			if( $am_dismiss_notice[$id] == 1){
+			if( isset( $am_dismiss_notice[$id] ) && $am_dismiss_notice[$id] == 1){
 				continue;
 			}
 
@@ -153,7 +153,7 @@ class AddonMasterAdminNotice{
 			if( $is_dismissable ) {
 				$classes .= " is-dismissible";
 			}
-		    ?>		    	
+		    ?>
 			<div id="<?php esc_attr_e($id);?>" class="notice am--message  <?php esc_attr_e($classes);?>" style="border-color:<?php echo sanitize_hex_color( $arg['border_color'] );?>">
 				<div class="am--message-inner">
 					<?php if( $logo ) : ?>
@@ -167,24 +167,24 @@ class AddonMasterAdminNotice{
 						<p><?php _e($notice_text) ?></p>
 						<p class="am--message-actions">
 							<?php if( $arg['buttons'] ): ?>
-								<?php foreach( (array)$arg['buttons'] as $btnkey => $btn ): 
+								<?php foreach( (array)$arg['buttons'] as $btnkey => $btn ):
 									$btn_text = ($btn['text']) ? $btn['text'] : "";
 									$btn_link = ($btn['link']) ? $btn['link'] : "";
 									$btn_class = ($btn['class']) ? $btn['class'] : "";
 									$btn_target = ($btn['target']) ? $btn['target'] : "";
 
 									$btn_icon = "amicon ";
-									$btn_icon .= ($btn['icon']) ? $btn['icon'] : "";									
+									$btn_icon .= ($btn['icon']) ? $btn['icon'] : "";
 									?>
 									<a href="<?php echo esc_url($btn_link); ?>" target="<?php esc_attr_e($btn_target); ?>" class="<?php esc_attr_e($btn_class); ?>"><span class="<?php esc_attr_e($btn_icon); ?>"></span> <?php esc_html_e($btn_text); ?></a>
 								<?php endforeach; ?>
 							<?php endif; ?>
 							<?php if( $is_dismissable ) : ?>
 								<a href="#" class="am-notice-dismiss"><span class="amicon dashicons dashicons-dismiss"></span> <?php esc_html_e($dismiss_text); ?></a>
-							<?php endif; ?>								
+							<?php endif; ?>
 						</p>
 					</div>
-				</div>				
+				</div>
 			</div>
 			<?php
 		} // endforeach
@@ -227,3 +227,4 @@ function my_admin_notices($args){
 }
 add_filter( 'addonmaster_admin_notice', 'my_admin_notices' );
 */
+
